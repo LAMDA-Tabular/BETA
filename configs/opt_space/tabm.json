@@ -1,0 +1,54 @@
+{
+    "tabm": {
+        "model": {
+            "num_embeddings": {
+                "n_frequencies": [
+                    "int",
+                    16,
+                    96
+                ],
+                "frequency_scale": [
+                    "loguniform",
+                    0.005,
+                    10.0
+                ],
+                "d_embedding": [
+                    "int",
+                    16,
+                    64
+                ]
+            },
+            "backbone": {
+                "n_blocks": [
+                    "int",
+                    1,
+                    5
+                ],
+                "d_block": [
+                    "int",
+                    64,
+                    1024     
+                ],
+                "dropout": [
+                    "uniform",
+                    0.0,
+                    0.5
+                ]
+            }
+        },
+        "training": {
+            "lr": [
+                "loguniform",
+                0.0001,
+                0.005
+            ],
+            "weight_decay":[
+                "?loguniform",
+                0.0,
+                0.0001,
+                0.1
+            ]
+        },
+        "general": {}
+    }
+}

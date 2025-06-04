@@ -1,0 +1,28 @@
+{
+    "Beta": {
+        "model": {
+            "arch_type": "tabm",
+                "k": 3,
+                "num_embeddings": {
+                    "type": "PLREmbeddings",
+                    "n_frequencies": 77,
+                    "frequency_scale": 0.04431360576139521,
+                    "d_embedding": 34,
+                    "lite": true
+                },
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 2,
+                    "d_block":256,
+                    "dropout": 0.1
+                },
+                "temperature": 1,
+                "sample_rate": 0.5
+        },
+        "training": {
+            "lr": 0.01,
+            "weight_decay": 1e-5
+        },
+        "general": {}
+    }
+}
