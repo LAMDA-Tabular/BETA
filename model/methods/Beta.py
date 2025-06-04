@@ -102,7 +102,6 @@ class BetaMethod(Method):
             self.pre_validate()
         except:
             print('Pre-validation failed.')
-            self.pre_validate()
         self.N_train = self.N['train'].cpu().numpy() if self.N is not None else None
         self.C_train = self.C['train'].cpu().numpy() if self.C is not None else None
         self.y_train = self.y['train'].cpu().numpy()
